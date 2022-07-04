@@ -1,0 +1,17 @@
+<%= form_with model: @letter do |letter_form| %>
+
+  <%= letter_form.label :title %>
+  <%= letter_form.text_field :title %><br>
+
+  <%= letter_form.label :content %>
+  <%= letter_form.text_field :content %><br>
+
+  <%= letter_form.label :delivery_date %>
+  <%= letter_form.text_field :delivery_date %><br>
+
+  <%= letter_form.label :delivery_email %>
+  <%= letter_form.text_field :delivery_email %><br>
+
+  <%= letter_form.submit %>
+<% end %>
+

@@ -2,18 +2,23 @@ require "test_helper"
 
 class LettersControllerTest < ActionDispatch::IntegrationTest
 
-  test "should get index" do
+  def setup 
+    @letter = letters(:example)
+  end
+
+  test "should redirect index when not logged in" do
     get letters_path
-    assert_response :success
+    assert_redirected_to new_user_session_path
   end
 
-  test "should get new" do
+  test "should redirect new when not logged in" do
     get new_letter_path
-    assert_response :success
+    assert_redirected_to new_user_session_path
   end
 
-  test "should get edit" do
-    get edit_letter_path(Letter.first)
-    assert_response :success
+  test "should redirect edit when not logged in" do
+    get edit_letter_url(@letter)
+    assert_redirected_to new_user_session_path 
   end
+
 end

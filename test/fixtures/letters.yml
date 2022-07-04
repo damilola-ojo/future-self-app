@@ -1,0 +1,7 @@
+example:
+  title: "Example Letter!"
+  content: "Example letter that will be sent to the future very soon"
+  delivery_date: <%= Date.today %>
+  delivery_email: "letter@example.com"
+  private: true
+  user: baller
