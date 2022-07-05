@@ -21,6 +21,8 @@ gem "importmap-rails"
 # Use Devise Gem for Authentication
 gem 'devise'
 
+gem "cssbundling-rails"
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 

@@ -7,7 +7,7 @@
   <%= letter_form.text_field :content %><br>
 
   <%= letter_form.label :delivery_date %>
-  <%= letter_form.text_field :delivery_date %><br>
+  <%= letter_form.date_select :delivery_date, selected: Date.today + 7, end_year: 2032 %><br>
 
   <%= letter_form.label :delivery_email %>
   <%= letter_form.text_field :delivery_email %><br>
