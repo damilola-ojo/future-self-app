@@ -36,6 +36,10 @@ before_action :authenticate_user!
     redirect_to root_path
   end
 
+  def public
+    @letters = Letter.public_letters
+  end
+
   private 
     def letter_params 
       params.required(:letter).permit(:id,
