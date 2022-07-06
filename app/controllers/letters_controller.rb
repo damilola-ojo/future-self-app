@@ -1,14 +1,6 @@
 class LettersController < ApplicationController
 before_action :authenticate_user!
 
-  def index
-    @letters = Letter.all
-  end
-
-  def show
-    @letter = Letter.find(params[:id])
-  end
-
   def new
     @letter = current_user.letters.build
   end
