@@ -13,7 +13,8 @@ before_action :authenticate_user!
     @letter = current_user.letters.build(letter_params)
 
     if @letter.save
-      redirect_to root_path
+      flash[:success] = "Letter sent to the future successfully"
+      redirect_to root_path 
     else
       render :new, status: :unporcessable_entity
     end
