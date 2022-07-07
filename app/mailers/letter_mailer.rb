@@ -5,9 +5,10 @@ class LetterMailer < ApplicationMailer
   #
   #   en.letter_mailer.deliver_to_the_future.subject
   #
-  def deliver_to_the_future
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def deliver_letter(letter)
+    @letter = letter
+    @user = letter.user
+    mail to:  @letter.delivery_email, subject: @letter.title
   end
+
 end

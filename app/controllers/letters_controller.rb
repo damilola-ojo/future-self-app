@@ -13,6 +13,7 @@ before_action :authenticate_user!
     @letter = current_user.letters.build(letter_params)
 
     if @letter.save
+      @letter.send_letter
       flash[:success] = "Letter sent to the future successfully"
       redirect_to root_path 
     else
