@@ -16,7 +16,7 @@ before_action :authenticate_user!
       flash[:success] = "Letter sent to the future successfully"
       redirect_to root_path 
     else
-      render :new, status: :unporcessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
   
@@ -26,7 +26,7 @@ before_action :authenticate_user!
     if @letter.update(letter_params)
       redirect_to root_path
     else 
-      render :edit, status: :unporcessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -48,6 +48,6 @@ before_action :authenticate_user!
                                       :content,
                                       :delivery_date,
                                       :delivery_email,
-                                      :private)
+                                      :public)
     end
 end

@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_183347) do
   create_table "letters", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.boolean "private", default: true
+    t.boolean "public", default: false
     t.datetime "delivery_date"
     t.string "delivery_email"
     t.datetime "created_at", null: false
