@@ -6,11 +6,6 @@ class LettersControllerTest < ActionDispatch::IntegrationTest
     @letter = letters(:example)
   end
 
-  test "should redirect index when not logged in" do
-    get letters_path
-    assert_redirected_to new_user_session_path
-  end
-
   test "should redirect new when not logged in" do
     get new_letter_path
     assert_redirected_to new_user_session_path
