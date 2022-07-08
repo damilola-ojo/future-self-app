@@ -22,6 +22,7 @@ gem "importmap-rails"
 gem 'devise'
 
 gem "cssbundling-rails"
+gem "simple_form"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
